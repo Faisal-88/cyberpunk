@@ -1,0 +1,169 @@
+/* Gaya dasar dari Tailwind, dengan penggantian font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d121c;
+            color: #b0c5e4;
+        }
+
+        /* Partikel kanvas mengisi latar belakang */
+        #particles-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+        }
+
+        /* Efek Glitch untuk judul utama */
+        .glitch-animation {
+            animation: glitch-anim 2.5s infinite linear alternate-reverse;
+            position: relative;
+        }
+
+        .glitch-animation::before,
+        .glitch-animation::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d121c;
+            overflow: hidden;
+            clip: rect(0, 900px, 0, 0);
+            mix-blend-mode: screen;
+        }
+
+        .glitch-animation::before {
+            content: attr(data-text);
+            left: 2px;
+            text-shadow: -1px 0 #ff00ff;
+            animation: glitch-anim2 3s infinite linear alternate-reverse;
+        }
+
+        .glitch-animation::after {
+            content: attr(data-text);
+            left: -2px;
+            text-shadow: -1px 0 #00ffff;
+            animation: glitch-anim3 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(41px, 9999px, 86px, 0); transform: skew(0deg); }
+            5% { clip: rect(100px, 9999px, 89px, 0); transform: skew(2deg); }
+            10% { clip: rect(69px, 9999px, 32px, 0); transform: skew(0deg); }
+            15% { clip: rect(38px, 9999px, 73px, 0); transform: skew(-1deg); }
+            20% { clip: rect(78px, 9999px, 12px, 0); transform: skew(2deg); }
+            25% { clip: rect(2px, 9999px, 86px, 0); transform: skew(0deg); }
+            30% { clip: rect(31px, 9999px, 77px, 0); transform: skew(1deg); }
+            35% { clip: rect(98px, 9999px, 57px, 0); transform: skew(-2deg); }
+            40% { clip: rect(65px, 9999px, 20px, 0); transform: skew(0deg); }
+            45% { clip: rect(23px, 9999px, 88px, 0); transform: skew(1deg); }
+            50% { clip: rect(56px, 9999px, 63px, 0); transform: skew(-1deg); }
+            55% { clip: rect(76px, 9999px, 16px, 0); transform: skew(2deg); }
+            60% { clip: rect(18px, 9999px, 49px, 0); transform: skew(0deg); }
+            65% { clip: rect(95px, 9999px, 74px, 0); transform: skew(-1deg); }
+            70% { clip: rect(44px, 9999px, 66px, 0); transform: skew(1deg); }
+            75% { clip: rect(10px, 9999px, 25px, 0); transform: skew(-2deg); }
+            80% { clip: rect(82px, 9999px, 47px, 0); transform: skew(0deg); }
+            85% { clip: rect(34px, 9999px, 91px, 0); transform: skew(1deg); }
+            90% { clip: rect(60px, 9999px, 5px, 0); transform: skew(-1deg); }
+            95% { clip: rect(89px, 9999px, 30px, 0); transform: skew(2deg); }
+            100% { clip: rect(13px, 9999px, 67px, 0); transform: skew(0deg); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(79px, 9999px, 51px, 0); }
+            5% { clip: rect(93px, 9999px, 27px, 0); }
+            10% { clip: rect(54px, 9999px, 10px, 0); }
+            15% { clip: rect(32px, 9999px, 66px, 0); }
+            20% { clip: rect(90px, 9999px, 43px, 0); }
+            25% { clip: rect(21px, 9999px, 78px, 0); }
+            30% { clip: rect(75px, 9999px, 95px, 0); }
+            35% { clip: rect(3px, 9999px, 12px, 0); }
+            40% { clip: rect(67px, 9999px, 89px, 0); }
+            45% { clip: rect(15px, 9999px, 52px, 0); }
+            50% { clip: rect(85px, 9999px, 34px, 0); }
+            55% { clip: rect(48px, 9999px, 70px, 0); }
+            60% { clip: rect(27px, 9999px, 81px, 0); }
+            65% { clip: rect(72px, 9999px, 19px, 0); }
+            70% { clip: rect(4px, 9999px, 94px, 0); }
+            75% { clip: rect(88px, 9999px, 26px, 0); }
+            80% { clip: rect(11px, 9999px, 77px, 0); }
+            85% { clip: rect(62px, 9999px, 83px, 0); }
+            90% { clip: rect(35px, 9999px, 58px, 0); }
+            95% { clip: rect(96px, 9999px, 13px, 0); }
+            100% { clip: rect(70px, 9999px, 45px, 0); }
+        }
+
+        @keyframes glitch-anim3 {
+            0% { clip: rect(50px, 9999px, 84px, 0); }
+            5% { clip: rect(78px, 9999px, 19px, 0); }
+            10% { clip: rect(99px, 9999px, 60px, 0); }
+            15% { clip: rect(23px, 9999px, 44px, 0); }
+            20% { clip: rect(87px, 9999px, 12px, 0); }
+            25% { clip: rect(15px, 9999px, 75px, 0); }
+            30% { clip: rect(64px, 9999px, 30px, 0); }
+            35% { clip: rect(5px, 9999px, 92px, 0); }
+            40% { clip: rect(81px, 9999px, 21px, 0); }
+            45% { clip: rect(19px, 9999px, 68px, 0); }
+            50% { clip: rect(55px, 9999px, 39px, 0); }
+            55% { clip: rect(72px, 9999px, 90px, 0); }
+            60% { clip: rect(40px, 9999px, 17px, 0); }
+            65% { clip: rect(89px, 9999px, 54px, 0); }
+            70% { clip: rect(25px, 9999px, 62px, 0); }
+            75% { clip: rect(77px, 9999px, 8px, 0); }
+            80% { clip: rect(94px, 9999px, 46px, 0); }
+            85% { clip: rect(33px, 9999px, 83px, 0); }
+            90% { clip: rect(69px, 9999px, 10px, 0); }
+            95% { clip: rect(8px, 9999px, 70px, 0); }
+            100% { clip: rect(58px, 9999px, 29px, 0); }
+        }
+
+        /* Animasi fade-in bagian saat digulir */
+        .fade-in-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efek neon berdenyut untuk ikon */
+        .animated-icon {
+            filter: drop-shadow(0 0 5px #00FFFF) drop-shadow(0 0 10px #00FFFF);
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px #00FFFF);
+            }
+            50% {
+                transform: scale(1.1);
+                filter: drop-shadow(0 0 10px #00FFFF) drop-shadow(0 0 20px #FF00FF);
+            }
+            100% {
+                transform: scale(1);
+                filter: drop-shadow(0 0 5px #00FFFF);
+            }
+        }
+
+        /* Efek melayang ikon media sosial */
+        .social-icon:hover {
+            transform: scale(1.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Penempatan tombol pengalih bahasa */
+        #language-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+        }

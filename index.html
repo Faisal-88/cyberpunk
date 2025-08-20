@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Synthesis</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body class="bg-[#0d121c] text-gray-300">
+
+    <!-- Tombol ganti bahasa -->
+    <div id="language-toggle">
+        <button id="lang-button" class="bg-[#4d90fe] text-white font-bold py-1 px-2 rounded-full shadow-lg hover:bg-[#ff007f] transition-colors duration-300 text-xs">
+            English
+        </button>
+    </div>
+
+    <!-- Kanvas untuk efek partikel di latar belakang -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Konten utama website -->
+    <main class="relative z-10">
+        <!-- Bagian utama (Hero Section) dengan efek parallax -->
+        <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center p-4">
+            <h1 class="text-7xl md:text-9xl font-bold text-[#00FFFF] mb-4 glitch-animation" data-text="CYBERPUNK">
+                CYBERPUNK
+            </h1>
+            <p class="text-xl md:text-3xl font-light text-[#FF00FF]" data-lang-key="hero_subtitle">
+                SYNTHESIS
+            </p>
+        </section>
+
+        <!-- Bagian Tentang Kami -->
+        <section id="about" class="fade-in-on-scroll min-h-screen flex flex-col items-center justify-center p-8 bg-[#0d121c]/70 backdrop-blur-sm rounded-lg shadow-2xl max-w-4xl mx-auto my-12 border border-[#4d90fe] border-dashed">
+            <h2 class="text-4xl md:text-6xl font-bold text-[#FF00FF] mb-6" data-lang-key="about_title">TENTANG KAMI</h2>
+            <p class="text-lg md:text-xl text-[#b0c5e4] leading-relaxed text-center" data-lang-key="about_para1">
+                Kami adalah entitas digital yang beroperasi di luar batas konvensional. 
+                Dengan menggabungkan data historis dan algoritma prediksi, kami menciptakan prototipe virtual yang mengubah realitas.
+            </p>
+            <p class="mt-4 text-lg md:text-xl text-[#b0c5e4] leading-relaxed text-center" data-lang-key="about_para2">
+                Masa depan tidak menunggu. Kita yang menciptakannya.
+            </p>
+        </section>
+
+        <!-- Bagian Layanan Guide -->
+        <section id="guide" class="fade-in-on-scroll min-h-screen flex flex-col items-center justify-center p-8 bg-[#0d121c]/70 backdrop-blur-sm rounded-lg shadow-2xl max-w-4xl mx-auto my-12 border border-[#4d90fe] border-dashed">
+            <h2 class="text-4xl md:text-6xl font-bold text-[#00FFFF] mb-6" data-lang-key="guide_title">PANDUAN LAYANAN</h2>
+            <div class="space-y-4 text-left w-full px-4">
+                <div class="p-4 bg-[#121c2e] rounded-lg border-2 border-[#FF00FF]">
+                    <h3 class="text-xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="guide1_title">1. Proyeksi Holografik</h3>
+                    <p class="text-[#9cb0c6]" data-lang-key="guide1_desc">
+                        Untuk meminta proyeksi, berikan kami file data 3D (.obj, .fbx) dan tentukan dimensi yang Anda inginkan. Kami akan mengolahnya dan mengirimkan pratinjau hologram interaktif ke terminal Anda.
+                    </p>
+                </div>
+                <div class="p-4 bg-[#121c2e] rounded-lg border-2 border-[#FF00FF]">
+                    <h3 class="text-xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="guide2_title">2. Rekonstruksi Data</h3>
+                    <p class="text-[#9cb0c6]" data-lang-key="guide2_desc">
+                        Unggah fragmen data yang rusak. Algoritma kami akan menganalisis pola dan merekonstruksi informasi yang hilang. Waktu pemrosesan bervariasi tergantung pada tingkat kerusakan.
+                    </p>
+                </div>
+                <div class="p-4 bg-[#121c2e] rounded-lg border-2 border-[#FF00FF]">
+                    <h3 class="text-xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="guide3_title">3. Desain Nanoteknologi</h3>
+                    <p class="text-[#9cb0c6]" data-lang-key="guide3_desc">
+                        Jelaskan fungsionalitas dan bahan yang Anda inginkan. AI kami akan membuat cetak biru molekuler yang disesuaikan dan mensimulasikan perilakunya sebelum fabrikasi.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Layanan -->
+        <section id="services" class="fade-in-on-scroll min-h-screen flex flex-col items-center justify-center p-8 bg-[#0d121c]/70 backdrop-blur-sm rounded-lg shadow-2xl max-w-4xl mx-auto my-12 border border-[#4d90fe] border-dashed">
+            <h2 class="text-4xl md:text-6xl font-bold text-[#FF00FF] mb-6" data-lang-key="services_title">LAYANAN SYNTESIS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Layanan 1: Proyeksi Holografik -->
+                <a href="#" class="cursor-pointer">
+                    <div class="bg-[#121c2e] p-6 rounded-lg shadow-2xl text-center border-4 border-[#FF00FF] transform hover:scale-105 transition-transform duration-300">
+                        <!-- Ikon Hologram -->
+                        <svg class="animated-icon inline-block w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L2 12h20L12 2z"></path>
+                            <path d="M2 12v10h20V12"></path>
+                            <path d="M12 12v10"></path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="service1_title">Proyeksi Holografik</h3>
+                        <p class="text-[#9cb0c6]" data-lang-key="service1_desc">
+                            Visualisasi data 3D yang interaktif dan detail.
+                        </p>
+                    </div>
+                </a>
+                <!-- Layanan 2: Rekonstruksi Data -->
+                <a href="#" class="cursor-pointer">
+                    <div class="bg-[#121c2e] p-6 rounded-lg shadow-2xl text-center border-4 border-[#FF00FF] transform hover:scale-105 transition-transform duration-300">
+                        <!-- Ikon Rangkaian Chip -->
+                        <svg class="animated-icon inline-block w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+                            <rect x="7" y="7" width="10" height="10"></rect>
+                            <line x1="12" y1="2" x2="12" y2="7"></line>
+                            <line x1="12" y1="17" x2="12" y2="22"></line>
+                            <line x1="2" y1="12" x2="7" y2="12"></line>
+                            <line x1="17" y1="12" x2="22" y2="12"></line>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="service2_title">Rekonstruksi Data</h3>
+                        <p class="text-[#9cb0c6]" data-lang-key="service2_desc">
+                            Memulihkan dan menganalisis informasi yang hilang.
+                        </p>
+                    </div>
+                </a>
+                <!-- Layanan 3: Desain Nanoteknologi -->
+                <a href="#" class="cursor-pointer">
+                    <div class="bg-[#121c2e] p-6 rounded-lg shadow-2xl text-center border-4 border-[#FF00FF] transform hover:scale-105 transition-transform duration-300">
+                        <!-- Ikon Atom -->
+                        <svg class="animated-icon inline-block w-16 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#00FFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a10 10 0 0 0-9 10 9.75 9.75 0 0 0 9 10 9.75 9.75 0 0 0 9-10 10 10 0 0 0-9-10z"></path>
+                        </svg>
+                        <h3 class="text-2xl font-semibold mb-2 text-[#00FFFF]" data-lang-key="service3_title">Desain Nanoteknologi</h3>
+                        <p class="text-[#9cb0c6]" data-lang-key="service3_desc">
+                            Menciptakan prototipe pada skala molekuler.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Bagian Komunitas -->
+        <section id="community" class="fade-in-on-scroll min-h-screen flex flex-col items-center justify-center p-8 bg-[#0d121c]/70 backdrop-blur-sm rounded-lg shadow-2xl max-w-4xl mx-auto my-12 border border-[#4d90fe] border-dashed">
+            <h2 class="text-4xl md:text-6xl font-bold text-[#00FFFF] mb-6" data-lang-key="community_title">KOMUNITAS</h2>
+            <p class="text-lg md:text-xl text-[#b0c5e4] leading-relaxed text-center" data-lang-key="community_para1">
+                Bergabunglah dengan jaringan individu berpandangan ke depan, seniman digital, dan peretas etis kami. Bagikan ide-ide Anda, berkolaborasi dalam proyek, dan bentuk masa depan siber bersama kami.
+            </p>
+            <p class="mt-4 text-lg md:text-xl text-[#b0c5e4] leading-relaxed text-center" data-lang-key="community_para2">
+                Di sini, Anda akan menemukan sumber daya eksklusif, forum diskusi yang aman, dan undangan ke acara pribadi kami. Mari terhubung dan mendorong batas-batas realitas.
+            </p>
+        </section>
+
+        <!-- Bagian Footer dengan ikon media sosial yang diperbarui -->
+        <footer class="text-center py-8">
+            <div class="flex justify-center space-x-6 mb-4">
+                <!-- Ikon X (Twitter) -->
+                <a href="https://twitter.com" target="_blank" aria-label="X" class="text-gray-400 hover:text-[#00FFFF] social-icon">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.261 8.502 11.239h-6.683l-5.648-7.485-6.843 7.485H2.327l8.723-9.522L1.502 2.25h6.165l4.31 6.315L18.244 2.25zM17.292 20.25h2.15l-6.284-8.775L7.088 20.25H4.938l6.195-8.685L4.54 2.25H6.52l4.148 5.82L17.292 20.25z" />
+                    </svg>
+                </a>
+                <!-- Ikon Instagram -->
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-gray-400 hover:text-[#FF00FF] social-icon">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.685.006 3.658.055 2.709.143 4.453 1.87 4.596 4.577.049.97.056 1.21.056 3.659v1.697c0 2.448-.007 2.698-.056 3.66-.143 2.71-1.887 4.453-4.596 4.596-.97.049-1.21.056-3.659.056h-1.697c-2.448 0-2.698-.007-3.66-.056-2.71-.143-4.453-1.887-4.596-4.596-.049-.97-.056-1.21-.056-3.659v-1.697c0-2.448.007-2.698.056-3.66.143-2.71 1.887-4.453 4.596-4.596.97-.049 1.21-.056 3.659-.056h1.697zm0 1.597h-1.697c-2.313 0-2.585.008-3.493.056-2.294.12-3.834 1.598-3.955 3.89-.048.908-.056 1.18-.056 3.493v1.697c0 2.313.008 2.585.056 3.493.12 2.294 1.598 3.834 3.89 3.955.908.048 1.18.056 3.493.056h1.697c2.313 0 2.585-.008 3.493-.056 2.294-.12 3.834-1.598 3.955-3.89.048-.908.056-1.18.056-3.493v-1.697c0-2.313-.008-2.585-.056-3.493-.12-2.294-1.598-3.834-3.89-3.955-.908-.048-1.18-.056-3.493-.056zM12 7c-2.761 0-5 2.239-5 5s2.239 5 5 5 5-2.239 5-5-2.239-5-5-5zm0 1.5c1.932 0 3.5 1.568 3.5 3.5s-1.568 3.5-3.5 3.5-3.5-1.568-3.5-3.5 1.568-3.5 3.5-3.5zm6.5-5.5a.75.75 0 100 1.5.75.75 0 000-1.5z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Ikon Facebook -->
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-gray-400 hover:text-[#00FFFF] social-icon">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.79c0-2.508 1.493-3.89 3.778-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.774-1.63 1.579V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- Ikon LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-gray-400 hover:text-[#FF00FF] social-icon">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.761s.784-1.76 1.75-1.761 1.75.79 1.75 1.761-.783 1.76-1.75 1.76zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm" data-lang-key="footer_text">&copy; 2025 Cyberpunk Synthesis. All Rights Reserved.</p>
+        </footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
