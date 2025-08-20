@@ -8,68 +8,70 @@
             const langButton = document.getElementById('lang-button');
             const langData = {
                 en: {
-                    hero_subtitle: 'SYNTHESIS',
-                    about_title: 'ABOUT',
-                    about_para1: 'We are a digital entity operating outside conventional boundaries. By combining historical data and predictive algorithms, we create virtual prototypes that reshape reality.',
-                    about_para2: 'The future does not wait. We create it.',
-                    guide_title: 'SERVICE GUIDE',
-                    guide1_title: '1. Holographic Projection',
-                    guide1_desc: 'To request a projection, provide us with a 3D data file (.obj, .fbx) and specify your desired dimensions. We will process it and deliver an interactive hologram preview to your terminal.',
-                    guide2_title: '2. Data Reconstruction',
-                    guide2_desc: 'Upload fragmented data. Our algorithms will analyze patterns and reconstruct the missing information. Processing time varies depending on the level of corruption.',
-                    guide3_title: '3. Nanotechnology Design',
-                    guide3_desc: 'Describe the desired functionality and materials. Our AI will create a customized molecular blueprint and simulate its behavior prior to fabrication.',
-                    services_title: 'SYNTHESIS SERVICES',
-                    service1_title: 'Holographic Projection',
-                    service1_desc: 'Interactive and detailed 3D data visualization.',
-                    service2_title: 'Data Reconstruction',
-                    service2_desc: 'Restoring and analyzing corrupted information.',
-                    service3_title: 'Nanotechnology Design',
-                    service3_desc: 'Creating prototypes at a molecular scale.',
-                    community_title: 'COMMUNITY',
-                    community_para1: 'Join our network of forward-thinkers, digital artists, and ethical hackers. Share your ideas, collaborate on projects, and shape the cyber future with us.',
-                    community_para2: 'Here, you\'ll find exclusive resources, secure discussion forums, and invitations to our private events. Let\'s connect and push the boundaries of reality.',
-                    footer_text: '© 2025 Cyberpunk Synthesis. All Rights Reserved.'
+                    hero_subtitle: 'The Decentralized Digital Fortress',
+                    about_title: 'ABOUT CYBERLITOCOIN',
+                    about_para1: 'Cyberlitocoin is not just a digital asset, it\'s a testament to the digital revolution. Built on a quantum-resilient blockchain, it\'s designed to withstand the threats of tomorrow, today.',
+                    about_para2: 'We offer a sanctuary for your assets in the volatile sea of the digital world. Security, Speed, and Sovereignty are our guiding principles.',
+                    guide_title: 'HOW TO GET CYBERLITOCOIN',
+                    guide1_title: '1. Decentralized Crypto Exchanges (DEXs)',
+                    guide1_desc: 'The most common way to get Cyberlitocoin is through crypto exchanges. Look for Cyberlitocoin on major decentralized exchanges (DEXs) that support trading pairs with tokens like ETH, BTC, or stablecoins.',
+                    guide2_title: '2. Network Participation',
+                    guide2_desc: 'You can earn Cyberlitocoin by participating in our network. Through the Proof-of-Synthesis mechanism, you can validate transactions and earn rewards.',
+                    guide3_title: '3. Community Reward Programs',
+                    guide3_desc: 'We regularly host bounty programs and airdrops for our valuable community members. Keep an eye on our official community channels for announcements and opportunities to earn free Cyberlitocoin.',
+                    services_title: 'JOIN NOW, EXPLORE THE FUTURE',
+                    services_subtitle: 'Cyberlitocoin is more than a currency, it\'s your key to digital sovereignty.',
+                    service1_title: 'Quantum Shield',
+                    service1_desc: 'Your transactions are guarded by the next generation of cryptographic security.',
+                    service2_title: 'Light Speed',
+                    service2_desc: 'Instant transactions for a frictionless digital experience.',
+                    service3_title: 'Total Sovereignty',
+                    service3_desc: 'Full control over your assets, free from third-party intervention.',
+                    community_title: 'THE COLLECTIVE',
+                    community_para1: 'The Collective is the backbone of Cyberlitocoin. A diverse group of cryptographers, digital nomads, and visionaries, all dedicated to the future of a free internet.',
+                    community_para2: 'Join us in our secure channels and help shape the future of this network. Your expertise is our power.',
+                    footer_text: '© 2025 Cyberlitocoin. All Rights Reserved.'
                 },
                 id: {
-                    hero_subtitle: 'SYNTHESIS',
-                    about_title: 'TENTANG KAMI',
-                    about_para1: 'Kami adalah entitas digital yang beroperasi di luar batas konvensional. Dengan menggabungkan data historis dan algoritma prediksi, kami menciptakan prototipe virtual yang mengubah realitas.',
-                    about_para2: 'Masa depan tidak menunggu. Kita yang menciptakannya.',
-                    guide_title: 'PANDUAN LAYANAN',
-                    guide1_title: '1. Proyeksi Holografik',
-                    guide1_desc: 'Untuk meminta proyeksi, berikan kami file data 3D (.obj, .fbx) dan tentukan dimensi yang Anda inginkan. Kami akan mengolahnya dan mengirimkan pratinjau hologram interaktif ke terminal Anda.',
-                    guide2_title: '2. Rekonstruksi Data',
-                    guide2_desc: 'Unggah fragmen data yang rusak. Algoritma kami akan menganalisis pola dan merekonstruksi informasi yang hilang. Waktu pemrosesan bervariasi tergantung pada tingkat kerusakan.',
-                    guide3_title: '3. Desain Nanoteknologi',
-                    guide3_desc: 'Jelaskan fungsionalitas dan bahan yang Anda inginkan. AI kami akan membuat cetak biru molekuler yang disesuaikan dan mensimulasikan perilakunya sebelum fabrikasi.',
-                    services_title: 'LAYANAN SYNTESIS',
-                    service1_title: 'Proyeksi Holografik',
-                    service1_desc: 'Visualisasi data 3D yang interaktif dan detail.',
-                    service2_title: 'Rekonstruksi Data',
-                    service2_desc: 'Memulihkan dan menganalisis informasi yang hilang.',
-                    service3_title: 'Desain Nanoteknologi',
-                    service3_desc: 'Menciptakan prototipe pada skala molekuler.',
-                    community_title: 'KOMUNITAS',
-                    community_para1: 'Bergabunglah dengan jaringan individu berpandangan ke depan, seniman digital, dan peretas etis kami. Bagikan ide-ide Anda, berkolaborasi dalam proyek, dan bentuk masa depan siber bersama kami.',
-                    community_para2: 'Di sini, Anda akan menemukan sumber daya eksklusif, forum diskusi yang aman, dan undangan ke acara pribadi kami. Mari terhubung dan mendorong batas-batas realitas.',
-                    footer_text: '© 2025 Cyberpunk Synthesis. All Rights Reserved.'
+                    hero_subtitle: 'Benteng Digital yang Terdesentralisasi',
+                    about_title: 'TENTANG CYBERLITOCOIN',
+                    about_para1: 'Cyberlitocoin bukan sekadar aset digital, ini adalah bukti revolusi digital. Dibangun di atas blockchain yang tangguh terhadap kuantum, ia dirancang untuk menghadapi ancaman masa depan, hari ini.',
+                    about_para2: 'Kami menawarkan tempat perlindungan untuk aset Anda di lautan dunia digital yang bergejolak. Keamanan, Kecepatan, dan Kedaulatan adalah prinsip panduan kami.',
+                    guide_title: 'CARA MENDAPATKAN CYBERLITOCOIN',
+                    guide1_title: '1. Pertukaran Kripto Terdesentralisasi (DEX)',
+                    guide1_desc: 'Cara paling umum untuk mendapatkan Cyberlitocoin adalah melalui pertukaran kripto. Carilah Cyberlitocoin di pertukaran terdesentralisasi (DEX) utama yang mendukung pasangan perdagangan dengan token seperti ETH, BTC, atau stablecoin.',
+                    guide2_title: '2. Partisipasi Jaringan',
+                    guide2_desc: 'Anda dapat memperoleh Cyberlitocoin dengan berpartisipasi dalam jaringan kami. Melalui mekanisme Proof-of-Synthesis, Anda dapat memvalidasi transaksi dan mendapatkan hadiah.',
+                    guide3_title: '3. Program Hadiah Komunitas',
+                    guide3_desc: 'Kami secara rutin menyelenggarakan program hadiah dan airdrop untuk anggota komunitas yang berharga. Pantau terus saluran komunitas resmi kami untuk mendapatkan pengumuman dan peluang untuk mendapatkan Cyberlitocoin gratis.',
+                    services_title: 'GABUNG SEKARANG, JELAJAHI MASA DEPAN',
+                    services_subtitle: 'Cyberlitocoin bukan sekadar mata uang, ini adalah kunci Anda menuju kedaulatan digital.',
+                    service1_title: 'Perisai Kuantum',
+                    service1_desc: 'Transaksismu dilindungi oleh keamanan kriptografi generasi berikutnya.',
+                    service2_title: 'Kecepatan Cahaya',
+                    service2_desc: 'Transaksi instan untuk pengalaman digital yang tanpa hambatan.',
+                    service3_title: 'Kedaulatan Total',
+                    service3_desc: 'Kendali penuh atas asetmu, tanpa campur tangan pihak ketiga.',
+                    community_title: 'KOLEKTIF',
+                    community_para1: 'Kolektif adalah tulang punggung Cyberlitocoin. Kelompok beragam yang terdiri dari ahli kriptografi, nomad digital, dan visioner, semuanya berdedikasi untuk masa depan internet yang bebas.',
+                    community_para2: 'Bergabunglah dengan kami di saluran aman kami dan bantu bentuk masa depan jaringan ini. Keahlian Anda adalah kekuatan kami.',
+                    footer_text: '© 2025 Cyberlitocoin. Hak Cipta Dilindungi.'
                 }
             };
-            let currentLang = 'id';
+            let currentLang = 'en';
 
             /**
-            * Memperbarui dimensi kanvas agar sesuai dengan ukuran jendela.
-            */
+             * Updates the canvas dimensions to match the window size.
+             */
             function resizeCanvas() {
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
             }
 
             /**
-             * Objek partikel untuk efek latar belakang.
-             * @param {number} x - Koordinat x awal.
-             * @param {number} y - Koordinat y awal.
+             * A particle object for the background effect.
+             * @param {number} x - The initial x-coordinate.
+             * @param {number} y - The initial y-coordinate.
              */
             class Particle {
                 constructor(x, y) {
@@ -82,7 +84,7 @@
                 }
 
                 /**
-                 * Menggambar partikel pada kanvas.
+                 * Draws the particle on the canvas.
                  */
                 draw() {
                     ctx.fillStyle = '#00FFFF';
@@ -92,7 +94,7 @@
                 }
 
                 /**
-                 * Memperbarui posisi dan interaksi partikel.
+                 * Updates the particle's position and interaction.
                  */
                 update() {
                     let dx = mouse.x - this.x;
@@ -138,7 +140,7 @@
             });
 
             /**
-             * Menginisialisasi susunan partikel.
+             * Initializes the particles array.
              */
             function initParticles() {
                 particles = [];
@@ -150,7 +152,7 @@
             }
 
             /**
-             * Menghubungkan partikel dengan garis jika jaraknya cukup dekat.
+             * Connects particles with lines if they are close enough.
              */
             function connect() {
                 let opacityValue = 1;
@@ -172,7 +174,7 @@
             }
 
             /**
-             * Putaran animasi utama untuk kanvas.
+             * Main animation loop for the canvas.
              */
             function animateCanvas() {
                 requestAnimationFrame(animateCanvas);
@@ -184,11 +186,11 @@
                 connect();
             }
 
-            // Animasi Paralaks dan Gulir
+            // Parallax and Scroll Animations
             const heroSection = document.getElementById('hero');
 
             /**
-             * Menangani efek paralaks bagian pahlawan.
+             * Handles the hero section parallax effect.
              */
             function handleParallax() {
                 const scrollY = window.pageYOffset;
@@ -212,7 +214,7 @@
             });
 
             /**
-             * Fungsionalitas pengalih bahasa.
+             * Language toggle functionality.
              */
             function toggleLanguage() {
                 currentLang = currentLang === 'id' ? 'en' : 'id';
@@ -224,7 +226,7 @@
                     }
                 });
                 
-                // Perbarui teks tombol berdasarkan bahasa baru
+                // Update the button text based on the new language
                 if (currentLang === 'id') {
                     langButton.textContent = 'English';
                 } else {
@@ -234,7 +236,7 @@
 
             langButton.addEventListener('click', toggleLanguage);
 
-            // Pengaturan awal
+            // Initial setup
             resizeCanvas();
             initParticles();
             animateCanvas();

@@ -1,11 +1,11 @@
-/* Gaya dasar dari Tailwind, dengan penggantian font */
+/* Base styles from Tailwind, with font overrides */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0d121c;
             color: #b0c5e4;
         }
 
-        /* Partikel kanvas mengisi latar belakang */
+        /* Particles canvas fills the background */
         #particles-canvas {
             position: fixed;
             top: 0;
@@ -15,7 +15,7 @@
             z-index: 0;
         }
 
-        /* Efek Glitch untuk judul utama */
+        /* Glitch Effect for main title */
         .glitch-animation {
             animation: glitch-anim 2.5s infinite linear alternate-reverse;
             position: relative;
@@ -121,7 +121,7 @@
             100% { clip: rect(58px, 9999px, 29px, 0); }
         }
 
-        /* Animasi fade-in bagian saat digulir */
+        /* Section fade-in animation on scroll */
         .fade-in-on-scroll {
             opacity: 0;
             transform: translateY(20px);
@@ -133,7 +133,7 @@
             transform: translateY(0);
         }
 
-        /* Efek neon berdenyut untuk ikon */
+        /* Pulsing neon effect for icons */
         .animated-icon {
             filter: drop-shadow(0 0 5px #00FFFF) drop-shadow(0 0 10px #00FFFF);
             animation: pulse 2s infinite ease-in-out;
@@ -154,16 +154,65 @@
             }
         }
 
-        /* Efek melayang ikon media sosial */
+        /* Social media icons hover effect */
         .social-icon:hover {
             transform: scale(1.2);
             transition: transform 0.3s ease-in-out;
         }
 
-        /* Penempatan tombol pengalih bahasa */
+        /* Language toggle button positioning */
         #language-toggle {
             position: fixed;
             top: 1rem;
             right: 1rem;
             z-index: 50;
+        }
+        
+        /* New animated SVG styles for features */
+        .feature-icon-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+        }
+        .feature-icon-container .st0, .st1, .st2 {
+            transition: all 0.5s ease-in-out;
+        }
+
+        /* Animation for the first feature icon (security shield) */
+        .feature-icon-1:hover .st1 {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 0;
+            animation: dash-draw-path 2s forwards;
+        }
+
+        @keyframes dash-draw-path {
+            from {
+                stroke-dashoffset: 1000;
+            }
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        /* Animation for the second feature icon (speed light) */
+        .feature-icon-2:hover .st1 {
+            animation: rotate-light 1.5s infinite linear;
+        }
+        @keyframes rotate-light {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Animation for the third feature icon (decentralized network) */
+        .feature-icon-3:hover .st1 {
+            fill: #00FFFF;
+        }
+        .feature-icon-3:hover .st2 {
+            stroke: #FF00FF;
+            stroke-dasharray: 20;
+            animation: line-dash 2s infinite linear;
+        }
+        @keyframes line-dash {
+            from { stroke-dashoffset: 20; }
+            to { stroke-dashoffset: 0; }
         }
